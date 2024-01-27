@@ -1,0 +1,390 @@
+
+  html,body{
+    width: 750px;
+  }
+body, h1, nav, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+  }
+
+  .parent-container{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    width: 750px;
+  }
+  
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 750px;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  
+  .main-events{
+    color: #b29758;
+  }
+  .main-content {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  header{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+  }
+  
+  .brand-title {
+    font-size: .7em;
+    color: #b29758; /* Gold color for the brand */
+    margin-left: 50px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    /* font-weight: bold; */
+    font-size: .75em;
+  }
+  
+  .navbar-links li {
+    padding: 0 1em;
+  }
+  
+  .navbar-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.75em;
+  }
+  
+  .navbar-links a:hover {
+    color: #b29758; /* Gold color for hover state */
+  }
+
+  .hero-section {
+    /* margin-top: 56px; */
+    background-image: url("images/images/image3.png");
+    background-size: 750px;
+    /* background-position: center; */
+    background-attachment: fixed;
+    height: 560px;;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 750px;
+    background-position: 0px -25px;
+    background-repeat: no-repeat;
+  }
+
+  .hero-section-text {
+    text-align: center;
+    color: white;
+    margin-top: -125px;
+    }
+
+  .hero-section-text span {
+        display: block;
+      font-size: 2em;
+      font-family: 'EB Garamond', serif;
+      line-height: 1.6;
+      letter-spacing: .35em;
+    }
+
+  
+
+  .services-section {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+    
+  .services-left-box {
+    display: block;
+    flex: 1;
+    background-image: url("images/images/flower.png");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 32%;
+    height: 345px;
+    /* width: 30%; */
+    float: left; 
+  }
+
+  .services-left-box-text {
+    display: block;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+
+  .services-left-box-text h1{
+    margin-top: 75px;
+    font-size: 1.2em;
+    font-weight: 100;
+    letter-spacing: .3em;
+  }
+  
+  .services-left-box-text p {
+    margin-top: 66px;
+    font-size: 0.8em;
+    /* font-family: 'Poliphili'; */
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 0.1em;
+    line-height: 15px;
+  }
+  
+  .services-left-box-text button {
+    margin-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #b29758;
+    font-size: 0.65em;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    /* font-weight: bold; */
+  }
+  
+  .services-right-box {
+    display: flex;
+    flex: 0 0 65%;
+    flex: 1;
+    background-image: url("images/images/image1.png");
+    background-size: cover;
+    background-position: center;
+    /* width: 60%; */
+    /* float: left; */
+    padding: 20px;  
+  }
+  
+  .testimonial-container {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    /* position: relative; */
+  }
+  
+  .quote {
+    margin-top: 28px;
+    font-size: 50px;
+    /* transform: translateY(-50%); */
+    margin-bottom: -15px;
+    font-family: 'Playfair Display', serif;
+  }
+    
+  
+  .testimonial-text {
+    text-align: center;
+    padding: 0 40px;
+    line-height: 35px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  .author {
+    font-weight: bold;
+    color:  #b29758 ;
+    font-size: .6em;
+    margin-bottom: 130px;
+    font-size: .55em;
+  }
+
+
+
+  
+  /* Gallery section styles */
+  .gallery-section {
+    display: flex;
+    background-image: url('images/images/image2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 670px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background-position: 25px 3px;
+    padding-top: 35px;
+    margin-bottom: 80px;
+    padding-bottom: 70px;
+  }
+
+  /* .background-image-gallery{
+    background-image: url('images/images/image2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* width: 670px;
+    height: 385.4px; */
+    /* position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background-position: 25px 3px;
+    padding-top: 35px;
+    margin-bottom: 80px;
+    padding-bottom: 70px; */
+  /* } */ 
+
+  .gallery-right-box{
+    display: block;
+    flex: 1;
+    background-image: url("images/images/flower.png");
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 32%;
+    height: 345px;
+    /* width: 30%; */
+    float: right; 
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .gallery-right-box-text{
+    display: block;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+
+  .gallery-right-box-text button {
+    margin-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #b29758;
+    font-size: 0.65em;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    /* font-weight: bold; */
+  }
+
+  .gallery-right-box-text h2{
+    margin-top: 75px;
+    font-size: 1.2em;
+    font-weight: 100;
+    letter-spacing: .3em;
+  }
+  
+  .gallery-right-box-text p {
+    margin-top: 63px;
+    font-size: 0.8em;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 3px;
+    line-height: 12px;
+  }
+  
+  /* Button styles */
+  /* .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+   */
+  /* Footer styles */
+  .footer {
+    background-color: #b29758; /* Replace with the actual color code from your brand palette */
+    color: white;
+    padding: 20px 20px;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .footer-section {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 577px;
+  margin-right: 33px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  }
+  
+  .footer-address, .footer-contact, .footer-rights, .footer-cta {
+
+    padding: 0 15px; /* Adjust spacing as needed */
+    font-weight: bold;
+    font-size: .6em;
+  }
+  .footer-contact{
+    margin-right: -4px;
+  }
+  
+  .footer-line {
+    height: 50px;
+    width: 1px;
+    background-color: white; /* Line color */
+    opacity: 1; /* Line opacity */
+    /* z-index: 1000; */
+  }
+  
+  .footer-cta button {
+    background-color: #b29758;
+    margin-left: 50px;
+    font-size: .9em;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-top: 17px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
