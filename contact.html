@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Ishan Gala</title>
+    
+    <meta name="description" content="Contact Ishan Gala - Software Engineer and Researcher.">
+    <meta property="og:title" content="Contact Ishan Gala">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -25,7 +33,6 @@
                     },
                     animation: {
                         'float': 'float 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
                     },
                     keyframes: {
                         float: {
@@ -45,35 +52,54 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        .form-input:focus {
-            box-shadow: 0 0 0 3px rgba(42, 174, 150, 0.2);
+        /* Custom Input Autofill styling for dark mode */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus {
+            -webkit-text-fill-color: #374151;
+            -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+            transition: background-color 5000s ease-in-out 0s;
         }
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        .social-icon:hover {
-            transform: scale(1.1);
+        .dark input:-webkit-autofill,
+        .dark input:-webkit-autofill:hover, 
+        .dark input:-webkit-autofill:focus, 
+        .dark textarea:-webkit-autofill,
+        .dark textarea:-webkit-autofill:hover,
+        .dark textarea:-webkit-autofill:focus {
+            -webkit-text-fill-color: #ffffff;
+            -webkit-box-shadow: 0 0 0px 1000px #374151 inset;
         }
     </style>
 </head>
-<body class="bg-primary-50 font-sans">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-40">
+<body class="bg-primary-50 font-sans dark:bg-gray-900 transition-colors duration-300">
+    
+    <nav class="bg-white shadow-sm sticky top-0 z-40 dark:bg-gray-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/" class="text-xl font-semibold text-gray-800 hover:text-primary-600">Ishan Gala</a>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-primary-600 dark:text-white dark:hover:text-primary-400">Ishan Gala</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-600 hover:text-primary-600">Home</a>
-                    <a href="about.html" class="text-gray-600 hover:text-primary-600">About</a>
-                    <a href="resume.html" class="text-gray-600 hover:text-primary-600">Resume</a>
-                    <a href="research.html" class="text-gray-600 hover:text-primary-600">Research & Projects</a>
-                    <a href="contact.html" class="text-primary-600 font-medium">Contact</a>
+                    <a href="/" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
+                    <a href="resume.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
+                    <a href="research.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Research & Projects</a>
+                    <a href="contact.html" class="text-primary-600 font-medium dark:text-primary-400">Contact</a>
+                    
+                    <button id="themeToggle" class="p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <svg id="darkIcon" class="w-5 h-5 text-gray-700 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg id="lightIcon" class="w-5 h-5 text-yellow-300 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button class="mobile-menu-button">
+                    <button class="mobile-menu-button p-2 text-gray-600 dark:text-gray-300">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -81,123 +107,95 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-white">
+        <div class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 relative z-50 border-t dark:border-gray-700 shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">About</a>
-                <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">Resume</a>
-                <a href="research.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">Research & Projects</a>
-                <a href="contact.html" class="block px-3 py-2 text-primary-600 font-medium">Contact</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
+                <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
+                <a href="research.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Research & Projects</a>
+                <a href="contact.html" class="block px-3 py-2 text-primary-600 font-medium dark:text-primary-400 bg-primary-50 dark:bg-gray-700">Contact</a>
+                <button id="mobileThemeToggle" class="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300">
+                    Toggle Dark Mode
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="py-16">
+    <section class="py-16 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h1>
-                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
-                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Feel free to reach out for collaborations or just to say hello! I'll try my best to get back to you.</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Get In Touch</h1>
+                <div class="w-20 h-1 bg-primary-600 mx-auto rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">Feel free to reach out for collaborations, research opportunities, or just to say hello!</p>
             </div>
             
             <div class="flex flex-col md:flex-row gap-12">
-                <!-- Contact Information Card -->
                 <div class="md:w-1/2">
-                    <div class="contact-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
-                        <div class="space-y-6">
+                    <div class="contact-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 transition-colors">
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">Contact Information</h2>
+                        
+                        <div class="space-y-8">
                             <div class="flex items-start">
-                                <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full animate-float">
-                                    <svg class="h-6 w-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="flex-shrink-0 bg-primary-100 dark:bg-primary-900 p-3 rounded-full animate-float">
+                                    <svg class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                     </svg>
                                 </div>
                                 <div class="ml-4">
-                                    <p class="text-gray-600">Email me at</p>
-                                    <a href="mailto:ishangalamscs@gmail.com" class="text-primary-600 hover:underline font-medium">ishangalamscs@gmail.com</a>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide font-semibold">Email</p>
+                                    <a href="mailto:ishangalamscs@gmail.com" class="text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 text-lg font-medium transition-colors">ishangalamscs@gmail.com</a>
                                 </div>
                             </div>
                             
-                            <!-- <div class="flex items-start">
-                                <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full animate-float" style="animation-delay: 0.2s">
-                                    <svg class="h-6 w-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p class="text-gray-600">Call me at</p>
-                                    <a href="tel:+12132457921" class="text-primary-600 hover:underline font-medium">+1 (213) 245-7921</a>
-                                </div>
-                            </div> -->
-                            
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full animate-float" style="animation-delay: 0.4s">
-                                    <svg class="h-6 w-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p class="text-gray-600">Find me at</p>
-                                    <p class="text-gray-600">University of Southern California<br>Los Angeles, CA 90007</p>
-                                </div>
-                            </div>
                         </div>
                         
-                        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-6">Connect With Me</h2>
-                        <div class="flex space-x-6">
-                            <a href="https://github.com/ishangala16" class="social-icon text-gray-500 hover:text-primary-600">
-                                <span class="sr-only">GitHub</span>
-                                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ishan-gala/" class="social-icon text-gray-500 hover:text-primary-600">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                                </svg>
-                            </a>
-                            <a href="https://x.com/ishangala16" class="social-icon text-gray-500 hover:text-primary-600">
-                                <span class="sr-only">X</span>
-                                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                                </svg>
-                            </a>
+                        <div class="mt-12">
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-6">Connect With Me</h3>
+                            <div class="flex space-x-6">
+                                <a href="https://github.com/ishangala16" class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-transform hover:scale-110">
+                                    <span class="sr-only">GitHub</span>
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ishan-gala/" class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-transform hover:scale-110">
+                                    <span class="sr-only">LinkedIn</span>
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                                </a>
+                                <a href="https://x.com/ishangala16" class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-transform hover:scale-110">
+                                    <span class="sr-only">X</span>
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Contact Form Card -->
                 <div class="md:w-1/2">
-                    <div class="contact-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Me a Message</h2>
+                    <div class="contact-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 transition-colors">
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Send a Message</h2>
                         <form id="contact-form" action="https://formspree.io/f/xgvalrjd" method="POST">
                             <div class="mb-4">
-                                <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" required>
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all placeholder-gray-400 dark:placeholder-gray-500" placeholder="John Doe" required>
                             </div>
                             <div class="mb-4">
-                                <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" required>
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all placeholder-gray-400 dark:placeholder-gray-500" placeholder="john@example.com" required>
                             </div>
                             <div class="mb-4">
-                                <label for="subject" class="block text-gray-700 text-sm font-medium mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" required>
+                                <label for="subject" class="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all placeholder-gray-400 dark:placeholder-gray-500" placeholder="Collaboration?" required>
                             </div>
                             <div class="mb-6">
-                                <label for="message" class="block text-gray-700 text-sm font-medium mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" required></textarea>
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="form-input w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all placeholder-gray-400 dark:placeholder-gray-500" placeholder="Your message here..." required></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all transform hover:scale-[1.01] active:scale-[0.99]">
+                            <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-all transform hover:scale-[1.01] active:scale-[0.99] shadow-lg">
                                 Send Message
                                 <svg class="w-4 h-4 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </button>
-                            <div id="response-message" class="hidden mt-4 p-3 rounded-lg text-center"></div>
+                            <div id="response-message" class="hidden mt-4 p-3 rounded-lg text-center text-sm font-medium"></div>
                         </form>
                         
                         <script>
@@ -221,11 +219,10 @@
                                 
                                 if (response.ok) {
                                     responseMessage.textContent = "Message sent successfully! I'll get back to you soon.";
-                                    responseMessage.className = "bg-green-100 text-green-700 mt-4 p-3 rounded-lg text-center animate-pulse-slow";
+                                    responseMessage.className = "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 mt-4 p-3 rounded-lg text-center text-sm font-medium";
                                     responseMessage.classList.remove("hidden");
                                     form.reset();
                                     
-                                    // Hide message after 5 seconds
                                     setTimeout(() => {
                                         responseMessage.classList.add("hidden");
                                     }, 5000);
@@ -233,8 +230,8 @@
                                     throw new Error("Form submission failed");
                                 }
                             } catch (error) {
-                                responseMessage.textContent = "Oops! Something went wrong. Please try again or email me directly.";
-                                responseMessage.className = "bg-red-100 text-red-700 mt-4 p-3 rounded-lg text-center";
+                                responseMessage.textContent = "Oops! Something went wrong. Please try again.";
+                                responseMessage.className = "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 mt-4 p-3 rounded-lg text-center text-sm font-medium";
                                 responseMessage.classList.remove("hidden");
                             } finally {
                                 submitBtn.disabled = false;
@@ -248,35 +245,22 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary-500 py-8 text-white">
+    <footer class="bg-primary-500 py-8 text-white dark:bg-gray-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="mb-4 md:mb-0">© 2025 Ishan Gala. All rights reserved.</p>
+                <p class="mb-4 md:mb-0 opacity-90">© 2025 Ishan Gala. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="https://github.com/ishangala16" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                        </svg>
+                    <a href="https://github.com/ishangala16" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/ishan-gala/" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                        </svg>
+                    <a href="https://www.linkedin.com/in/ishan-gala/" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
                     </a>
-                    <a href="https://x.com/ishangala16" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">X</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                        </svg>
+                    <a href="https://x.com/ishangala16" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
                     </a>
-                    <a href="mailto:ishangalamscs@gmail.com" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">Email</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
+                    <a href="mailto:ishangalamscs@gmail.com" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
                 </div>
             </div>
@@ -292,15 +276,28 @@
             menu.classList.toggle('hidden');
         });
 
-        // Add animation to form inputs on focus
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('focus', () => {
-                input.classList.add('ring-2', 'ring-primary-500');
-            });
-            input.addEventListener('blur', () => {
-                input.classList.remove('ring-2', 'ring-primary-500');
-            });
-        });
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        const darkIcon = document.getElementById('darkIcon');
+        const lightIcon = document.getElementById('lightIcon');
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+        }
+
+        themeToggle.addEventListener('click', toggleDarkMode);
+        mobileThemeToggle.addEventListener('click', toggleDarkMode);
+
+        // Check for saved theme preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+           (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
     </script>
 </body>
 </html>

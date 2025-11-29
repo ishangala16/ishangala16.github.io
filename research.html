@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research & Projects | Ishan Gala</title>
+    
+    <meta name="description" content="Research and Projects by Ishan Gala - Exploring Robotics, RL, LLMs, and Computer Vision.">
+    <meta property="og:title" content="Ishan Gala | Research & Projects">
+    <meta property="og:description" content="Deep dive into my work on Robotics, AI, and Software Engineering.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -27,26 +36,33 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body class="bg-primary-50 font-sans">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-40">
+<body class="bg-primary-50 font-sans dark:bg-gray-900 transition-colors duration-300">
+    <nav class="bg-white shadow-sm sticky top-0 z-40 dark:bg-gray-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/" class="text-xl font-semibold text-gray-800 hover:text-primary-600">Ishan Gala</a>
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-primary-600 dark:text-white dark:hover:text-primary-400">Ishan Gala</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-600 hover:text-primary-600">Home</a>
-                    <a href="about.html" class="text-gray-600 hover:text-primary-600">About</a>
-                    <a href="resume.html" class="text-gray-600 hover:text-primary-600">Resume</a>
-                    <a href="research.html" class="text-primary-600 font-medium">Research & Projects</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-primary-600">Contact</a>
+                    <a href="/" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
+                    <a href="resume.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
+                    <a href="research.html" class="text-primary-600 font-medium dark:text-primary-400">Research & Projects</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
+                    
+                    <button id="themeToggle" class="p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <svg id="darkIcon" class="w-5 h-5 text-gray-700 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg id="lightIcon" class="w-5 h-5 text-yellow-300 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button class="mobile-menu-button">
+                    <button class="mobile-menu-button p-2 text-gray-600 dark:text-gray-300">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -54,61 +70,58 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-white">
+        <div class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 relative z-50 border-t dark:border-gray-700 shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">About</a>
-                <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">Resume</a>
-                <a href="research.html" class="block px-3 py-2 text-primary-600 font-medium">Research & Projects</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600">Contact</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
+                <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
+                <a href="research.html" class="block px-3 py-2 text-primary-600 font-medium dark:text-primary-400 bg-primary-50 dark:bg-gray-700">Research & Projects</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
+                <button id="mobileThemeToggle" class="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300">
+                    Toggle Dark Mode
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Research & Projects Section -->
-    <section class="py-16">
+    <section class="py-16 dark:bg-gray-900 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Research & Projects</h1>
-                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Research & Projects</h1>
+                <div class="w-20 h-1 bg-primary-600 mx-auto rounded-full"></div>
             </div>
             
-            <!-- Research -->
             <div class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b border-primary-200 pb-2">Research</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8 border-b border-primary-200 dark:border-gray-700 pb-2">Research</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Research Item 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Robotic Connector Manipulation - IIWA 14 Robot with NIST Board</h3>
-                        <p class="text-gray-600 mb-4">Advisor: Dr. S K Gupta, RRoS Lab | Spring/2025</p>
-                        <p class="text-gray-600 mb-4">Built simulation environment in NVIDIA Isaac Sim 4.5 for IIWA 14 to perform plug/unplug operations. Developed RL-based control policies and integrated computer vision for connector detection and pose estimation.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Robotic Connector Manipulation - IIWA 14 Robot with NIST Board</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Advisor: Dr. S K Gupta, RRoS Lab | Spring/2025</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Built simulation environment in NVIDIA Isaac Sim 4.5 for IIWA 14 to perform plug/unplug operations. Developed RL-based control policies and integrated computer vision for connector detection and pose estimation.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">NVIDIA Isaac Sim 4.5</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Reinforcement Learning</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Computer Vision</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">IIWA 14 Robot</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">NVIDIA Isaac Sim 4.5</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Reinforcement Learning</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Computer Vision</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">IIWA 14 Robot</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Projects -->
             <div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b border-primary-200 pb-2">Projects</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8 border-b border-primary-200 dark:border-gray-700 pb-2">Projects</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Task-Aware Local RAG for Robot Procedure and Code Generation</h3>
-                        <p class="text-gray-600 mb-4">Built a local RAG system using Ollama + FAISS to extract grounded contingency procedures & generate robot code with 40% reduction in hallucinations.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Task-Aware Local RAG for Robot Procedure and Code Generation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Built a local RAG system using Ollama + FAISS to extract grounded contingency procedures & generate robot code with 40% reduction in hallucinations.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Ollama</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">FAISS</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">RAG</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Local LLM</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Ollama</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">FAISS</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">RAG</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Local LLM</span>
                         </div>
-                        <div class="text-sm text-gray-600">
-                            <p class="font-medium">Achievements:</p>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">
+                            <p class="font-medium text-gray-800 dark:text-white">Achievements:</p>
                             <ul class="list-disc pl-5 mt-1 space-y-1">
                                 <li>Recall@5: 84% and MRR: 0.78 on 20+ documents</li>
                                 <li>Deployed for on-floor fault recovery support</li>
@@ -117,45 +130,43 @@
                         </div>
                     </div>
                     
-                    <!-- Project 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-Time Stock Market Ticker - Full Stack Web & Android App</h3>
-                        <p class="text-gray-600 mb-4">Developed a real-time stock market ticker and portfolio management system with seamless UI/UX.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Real-Time Stock Market Ticker - Full Stack Web & Android App</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Developed a real-time stock market ticker and portfolio management system with seamless UI/UX.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">MERN Stack</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">React.js</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Node.js</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">MongoDB</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Android</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">MERN Stack</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">React.js</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Android</span>
                         </div>
                         <div class="flex space-x-4 mt-4">
                             <a href="https://github.com/ishangala16/Stock-Screener-Web-App" 
                                target="_blank" 
                                rel="noopener noreferrer"
-                               class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
+                               class="bg-primary-600 hover:bg-primary-700 dark:hover:bg-primary-500 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
                                 View Code
                             </a>
                             <a href="https://frontend-webtech3-ishan24.wl.r.appspot.com/search/home" 
                                target="_blank" 
                                rel="noopener noreferrer"
-                               class="border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-4 py-2 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
+                               class="border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-gray-700 px-4 py-2 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
                                 Live Demo
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Project 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">CiteLlama – Improving Citations with Context</h3>
-                        <p class="text-gray-600 mb-4">Fine-tuned Llama 3.1 8B using LoRA on academic citations to generate accurate, grounded citations with 11% boost in quality.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">CiteLlama – Improving Citations with Context</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Fine-tuned Llama 3.1 8B using LoRA on academic citations to generate accurate, grounded citations with 11% boost in quality.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Llama 3.1</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">LoRA</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Fine-tuning</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Academic Citations</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Llama 3.1</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">LoRA</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Fine-tuning</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Academic Citations</span>
                         </div>
-                        <div class="text-sm text-gray-600">
-                            <p class="font-medium">Features:</p>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">
+                            <p class="font-medium text-gray-800 dark:text-white">Features:</p>
                             <ul class="list-disc pl-5 mt-1 space-y-1">
                                 <li>Implemented citation formatting for CVPR, AAAI, IEEE, ACM</li>
                                 <li>11% boost in citation quality (BLEU + relevance)</li>
@@ -164,18 +175,17 @@
                         </div>
                     </div>
                     
-                    <!-- Project 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Dexterous Manipulation - Throwing & Catching</h3>
-                        <p class="text-gray-600 mb-4">Developed an RL-based framework for dexterous manipulation tasks using MuJoCo environments with hand models.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Dexterous Manipulation - Throwing & Catching</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Developed an RL-based framework for dexterous manipulation tasks using MuJoCo environments with hand models.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Reinforcement Learning</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">MuJoCo</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">SAC</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Dexterous Manipulation</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Reinforcement Learning</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">MuJoCo</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">SAC</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Dexterous Manipulation</span>
                         </div>
-                        <div class="text-sm text-gray-600">
-                            <p class="font-medium">Technologies:</p>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">
+                            <p class="font-medium text-gray-800 dark:text-white">Technologies:</p>
                             <ul class="list-disc pl-5 mt-1 space-y-1">
                                 <li>Leap Hand & Wonik Allegro models</li>
                                 <li>Soft Actor-Critic (SAC) algorithm</li>
@@ -184,18 +194,17 @@
                         </div>
                     </div>
                     
-                    <!-- Project 5 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">MRI Data Pipeline & GAN-based Augmentation</h3>
-                        <p class="text-gray-600 mb-4">Engineered MRI data pipeline for 10,000+ scans with GAN-based augmentation for anomaly detection.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">MRI Data Pipeline & GAN-based Augmentation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Engineered MRI data pipeline for 10,000+ scans with GAN-based augmentation for anomaly detection.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">GAN</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Medical Imaging</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Data Pipeline</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">MRI</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">GAN</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Medical Imaging</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Data Pipeline</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">MRI</span>
                         </div>
-                        <div class="text-sm text-gray-600">
-                            <p class="font-medium">Results:</p>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">
+                            <p class="font-medium text-gray-800 dark:text-white">Results:</p>
                             <ul class="list-disc pl-5 mt-1 space-y-1">
                                 <li>Improved MRI image quality (1.5T → 3T equivalent)</li>
                                 <li>10% improvement in classification accuracy</li>
@@ -204,18 +213,17 @@
                         </div>
                     </div>
                     
-                    <!-- Project 6 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vision-Based Tool Wear Detection System</h3>
-                        <p class="text-gray-600 mb-4">Developed computer vision system for real-time tool wear detection in manufacturing environment.</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Vision-Based Tool Wear Detection System</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Developed computer vision system for real-time tool wear detection in manufacturing environment.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Computer Vision</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">OpenCV</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Manufacturing</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Quality Control</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Computer Vision</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">OpenCV</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Manufacturing</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Quality Control</span>
                         </div>
-                        <div class="text-sm text-gray-600">
-                            <p class="font-medium">Features:</p>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">
+                            <p class="font-medium text-gray-800 dark:text-white">Features:</p>
                             <ul class="list-disc pl-5 mt-1 space-y-1">
                                 <li>Real-time processing on production line</li>
                                 <li>Integrated with OPC UA framework</li>
@@ -228,35 +236,22 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary-500 py-8 text-white">
+    <footer class="bg-primary-500 py-8 text-white dark:bg-gray-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="mb-4 md:mb-0">© 2025 Ishan Gala. All rights reserved.</p>
+                <p class="mb-4 md:mb-0 opacity-90">© 2025 Ishan Gala. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="https://github.com/ishangala16" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                        </svg>
+                    <a href="https://github.com/ishangala16" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/ishan-gala/" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                        </svg>
+                    <a href="https://www.linkedin.com/in/ishan-gala/" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
                     </a>
-                    <a href="https://x.com/ishangala16" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">X</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                        </svg>
+                    <a href="https://x.com/ishangala16" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
                     </a>
-                    <a href="mailto:ishangalamscs@gmail.com" class="text-primary-200 hover:text-white transition-colors">
-                        <span class="sr-only">Email</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
+                    <a href="mailto:ishangalamscs@gmail.com" class="hover:text-primary-200 transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
                 </div>
             </div>
@@ -271,6 +266,29 @@
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        const darkIcon = document.getElementById('darkIcon');
+        const lightIcon = document.getElementById('lightIcon');
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+        }
+
+        themeToggle.addEventListener('click', toggleDarkMode);
+        mobileThemeToggle.addEventListener('click', toggleDarkMode);
+
+        // Check for saved theme preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+           (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
     </script>
 </body>
 </html>
