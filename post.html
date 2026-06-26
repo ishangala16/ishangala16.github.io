@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Ishan Gala</title>
+    
+    <!-- Tailwind CSS with Typography plugin for rendering markdown -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9f7',
+                            100: '#e1f3ef',
+                            200: '#c3e7df',
+                            300: '#a5dbcf',
+                            400: '#68c4af',
+                            500: '#2aae96',
+                            600: '#269d87',
+                            700: '#208370',
+                            800: '#19695a',
+                            900: '#14564a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Marked.js for parsing markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFV90DHB74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DFV90DHB74');
+    </script>
+</head>
+<body class="bg-primary-50 font-sans dark:bg-gray-900 transition-colors duration-300 min-h-screen flex flex-col">
+    
+    <nav class="bg-white shadow-sm sticky top-0 z-40 dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-gray-800 hover:text-primary-600 dark:text-white dark:hover:text-primary-400">Ishan Gala</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="blog.html" class="text-primary-600 font-medium dark:text-primary-400">&larr; Back to Blog</a>
+                    
+                    <button id="themeToggle" class="p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <svg id="darkIcon" class="w-5 h-5 text-gray-700 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg id="lightIcon" class="w-5 h-5 text-yellow-300 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-16 flex-grow">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="content" class="prose prose-lg dark:prose-invert prose-primary mx-auto bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <div class="flex justify-center items-center h-32">
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary-500 py-8 text-white dark:bg-gray-800 transition-colors duration-300 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="opacity-90">© 2025 Ishan Gala. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        }
+        themeToggle.addEventListener('click', toggleDarkMode);
+        if (localStorage.getItem('darkMode') === 'true' || 
+           (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Fetch and render markdown content
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+            const contentDiv = document.getElementById('content');
+            
+            if (postId) {
+                // Ensure valid path format to prevent directory traversal
+                const safePostId = postId.replace(/[^a-zA-Z0-9_-]/g, '');
+                
+                fetch(`posts/${safePostId}.md`)
+                    .then(response => {
+                        if (!response.ok) throw new Error("Post not found");
+                        return response.text();
+                    })
+                    .then(text => {
+                        contentDiv.innerHTML = marked.parse(text);
+                        // Make sure first heading gets a margin top if needed
+                        const firstChild = contentDiv.firstElementChild;
+                        if(firstChild) firstChild.style.marginTop = '0';
+                    })
+                    .catch(err => {
+                        contentDiv.innerHTML = `
+                            <h1>Post Not Found</h1>
+                            <p>Sorry, the post you are looking for could not be found.</p>
+                            <a href="blog.html" class="text-primary-600 no-underline hover:underline">&larr; Return to blog</a>
+                        `;
+                    });
+            } else {
+                contentDiv.innerHTML = `
+                    <h1>Oops!</h1>
+                    <p>No post ID was specified in the URL.</p>
+                    <a href="blog.html" class="text-primary-600 no-underline hover:underline">&larr; Return to blog</a>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishan Gala | USC MS CS Student</title>
+    <title>Ishan Gala | Software Engineer</title>
     
-    <meta name="description" content="Portfolio of Ishan Gala - MS CS Student at USC specializing in ML, Perception, and Robotics.">
+    <meta name="description" content="Portfolio of Ishan Gala - Software Engineer specializing in ML, Perception, and Robotics.">
     <meta property="og:title" content="Ishan Gala | Portfolio">
     <meta property="og:description" content="Software Engineer at Google. Exploring LLMs, Robotics, and Inference Optimization.">
     <meta property="og:type" content="website">
@@ -75,6 +75,15 @@
             transform: scale(1.2);
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFV90DHB74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DFV90DHB74');
+    </script>
 </head>
 <body class="bg-primary-50 font-sans dark:bg-gray-900 transition-colors duration-300">
     
@@ -91,6 +100,7 @@
                     <a href="about.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
                     <a href="resume.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
                     <a href="research.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Research & Projects</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Blog</a>
                     <a href="contact.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
                     
                     <button id="themeToggle" class="p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
@@ -117,6 +127,7 @@
                 <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
                 <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
                 <a href="research.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Research & Projects</a>
+                <a href="blog.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Blog</a>
                 <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
                 <button id="mobileThemeToggle" class="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300">
                     Toggle Dark Mode
@@ -162,20 +173,38 @@
             
             <div class="max-w-2xl"> <div class="flex items-center mb-10 pl-2">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Latest Updates</h2>
-                    <span class="ml-3 px-2 py-1 text-xs font-medium bg-primary-50 text-primary-600 rounded-full border border-primary-100 dark:bg-gray-800 dark:text-primary-400 dark:border-gray-700">Live Feed</span>
+                    <span class="ml-3 px-3 py-1 flex items-center text-xs font-medium bg-primary-50 text-primary-600 rounded-full border border-primary-100 dark:bg-gray-800 dark:text-primary-400 dark:border-gray-700">
+                        <span class="relative flex h-2 w-2 mr-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-600 dark:bg-primary-500"></span>
+                        </span>
+                        Live Feed
+                    </span>
                 </div>
                 
                 <div class="relative">
                     <div class="timeline-line"></div>
 
-                    <div class="space-y-8"> <div class="relative pl-8 group">
+                    <div class="space-y-8"> 
+                        <div class="relative pl-8 group">
                             <div class="timeline-dot"></div>
-                            
                             <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                <span class="text-xs font-bold font-mono text-primary-600 dark:text-primary-400 w-24 flex-shrink-0 mb-1 sm:mb-0 uppercase tracking-wide">May 2025</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 w-24 flex-shrink-0 mb-1 sm:mb-0"><span class="inline-block w-10">NOV</span> 2025</span>
                                 <div>
                                     <p class="text-gray-800 dark:text-gray-100 leading-relaxed">
-                                        Graduated from <span class="font-semibold">USC Viterbi</span> with a Master's in Computer Science.
+                                        Started a new role as a <span class="font-semibold text-primary-600 dark:text-primary-400">Software Engineer</span> at <span class="font-semibold">Google</span>, working on the Payments Platform.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative pl-8 group">
+                            <div class="timeline-dot"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-baseline">
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 w-24 flex-shrink-0 mb-1 sm:mb-0"><span class="inline-block w-10">JUL</span> 2025</span>
+                                <div>
+                                    <p class="text-gray-800 dark:text-gray-200 leading-relaxed">
+                                        Joined <span class="font-semibold text-gray-900 dark:text-white">Amazon</span> as a Software Engineer, focusing on Stores Foundational AI.
                                     </p>
                                 </div>
                             </div>
@@ -184,7 +213,19 @@
                         <div class="relative pl-8 group">
                             <div class="timeline-dot"></div>
                             <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                <span class="text-xs font-bold font-mono text-gray-500 dark:text-gray-500 w-24 flex-shrink-0 mb-1 sm:mb-0 uppercase tracking-wide">May 2025</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 w-24 flex-shrink-0 mb-1 sm:mb-0"><span class="inline-block w-10">MAY</span> 2025</span>
+                                <div>
+                                    <p class="text-gray-800 dark:text-gray-200 leading-relaxed">
+                                        Graduated from <span class="font-semibold text-gray-900 dark:text-white">USC Viterbi</span> with a Master's in Computer Science.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 group">
+                            <div class="timeline-dot"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-baseline">
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 w-24 flex-shrink-0 mb-1 sm:mb-0"><span class="inline-block w-10">MAY</span> 2025</span>
                                 <div>
                                     <p class="text-gray-800 dark:text-gray-200 leading-relaxed">
                                         Wrapped up my Machine Learning Co-op at <span class="font-medium text-gray-900 dark:text-white">Avalon Mfg</span>.
@@ -196,7 +237,7 @@
                         <div class="relative pl-8 group">
                             <div class="timeline-dot"></div>
                             <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                <span class="text-xs font-bold font-mono text-gray-500 dark:text-gray-500 w-24 flex-shrink-0 mb-1 sm:mb-0 uppercase tracking-wide">Jan 2025</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 w-24 flex-shrink-0 mb-1 sm:mb-0"><span class="inline-block w-10">JAN</span> 2025</span>
                                 <div>
                                     <p class="text-gray-800 dark:text-gray-200 leading-relaxed">
                                         Built and deployed a local RAG system, reducing LLM hallucinations for internal query tasks.
@@ -208,7 +249,7 @@
                         <div class="relative pl-8 group">
                             <div class="timeline-dot"></div>
                             <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                <span class="text-xs font-bold font-mono text-gray-500 dark:text-gray-500 w-24 flex-shrink-0 mb-1 sm:mb-0 uppercase tracking-wide">Dec 2024</span>
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 w-24 flex-shrink-0 mb-1 sm:mb-0"><span class="inline-block w-10">DEC</span> 2024</span>
                                 <div>
                                     <p class="text-gray-800 dark:text-gray-200 leading-relaxed">
                                         Research on RL frameworks for dexterous manipulation using MuJoCo environments.

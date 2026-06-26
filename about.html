@@ -93,6 +93,15 @@
             transform: scale(1.1);
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFV90DHB74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DFV90DHB74');
+    </script>
 </head>
 <body class="bg-primary-50 font-sans dark:bg-gray-900 transition-colors duration-300">
     
@@ -107,6 +116,7 @@
                     <a href="about.html" class="text-primary-600 font-medium dark:text-primary-400">About</a>
                     <a href="resume.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
                     <a href="research.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Research & Projects</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Blog</a>
                     <a href="contact.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
                     
                     <button id="themeToggle" class="p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
@@ -133,6 +143,7 @@
                 <a href="about.html" class="block px-3 py-2 text-primary-600 font-medium dark:text-primary-400 bg-primary-50 dark:bg-gray-700">About</a>
                 <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
                 <a href="research.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Research & Projects</a>
+                <a href="blog.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Blog</a>
                 <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
                 <button id="mobileThemeToggle" class="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300">
                     Toggle Dark Mode
@@ -168,20 +179,20 @@
                             <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4">Quick Facts</h4>
                             <div class="space-y-3">
                                 <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                                    <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg></span>
-                                    <span>Built a 2-axis gimbal from scratch</span>
+                                    <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></span>
+                                    <span>Wrote my first C program at age 9</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                                    <span>Youngest MCP for Windows 7 at 13</span>
                                 </div>
                                 <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
                                     <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></span>
-                                    <span>Grew meme page to 50K+ followers</span>
+                                    <span>Co-founded & led CODE as President</span>
                                 </div>
                                 <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                                    <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></span>
-                                    <span>Mentor for FIRST Robotics</span>
-                                </div>
-                                <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                                    <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></span>
-                                    <span>Video Editor & Creator</span>
+                                    <span class="w-8 flex justify-center text-primary-500"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg></span>
+                                    <span>Published Author in Springer LNEE</span>
                                 </div>
                             </div>
                         </div>
@@ -194,87 +205,126 @@
                         <div class="mb-12">
                             <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Hello!</h2>
                             <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                                I’m Ishan. I’m a <strong class="text-primary-600 dark:text-primary-400">Software Engineer at Google</strong> and a recent USC Master's grad. I love building systems that are scalable, efficient, and actually useful.
+                                I’m Ishan. I’m a <strong class="text-primary-600 dark:text-primary-400">Software Engineer at Google</strong> and a recent USC Master's grad. My fascination with technology began early - I wrote my first "Hello World" in C at age 9, and by 13, I had achieved the milestone of becoming the Youngest Microsoft Certified Professional for Windows 7.
                             </p>
                             
                             <div class="bg-primary-50 dark:bg-primary-900/20 p-5 rounded-lg mb-6 border-l-4 border-primary-500">
-                                <p class="text-gray-700 dark:text-gray-200 italic">"I've always been a builder at heart. There's something magical about having a curiosity, writing some code, and seeing it turn into something real."</p>
+                                <p class="text-gray-700 dark:text-gray-200 italic">"The collaborative efforts and the union of different skills required to find an innovative solution to a problem excites me."</p>
                             </div>
                             
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                Over the years, my curiosity evolved into a deep passion for Artificial Intelligence and Computer Vision. From deploying custom EfficientDet models on smartphones for my college Robocon team, to architecting multi-threaded inference pipelines for international clients, I love building intelligent systems that solve real-world problems. 
+                            </p>
+
                             <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                                My journey started with simple curiosity - figuring out how things work. That led me from building DIY gadgets in my room to researching AI and robotics in grad school. When I’m not coding, I’m exploring the creative side of tech: taking photos, making videos, or mentoring the next generation of engineers in FIRST Robotics.
+                                Beyond the code, I'm a community builder at heart. I co-founded the Club of Developers & Engineers (CODE), serving as President for two years where I taught Machine Learning to juniors and led industry collaborations. Whether it's training neural networks, exploring novel optimization algorithms, or mentoring the next generation of engineers, I'm always looking for ways to push the boundaries of what's possible.
                             </p>
                         </div>
 
                         <div class="mb-16">
-                            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">My Journey</h2>
+                            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">The Core Pillars</h2>
                             
-                            <div class="relative pl-2">
-                                <div class="timeline-line"></div>
-
-                                <div class="space-y-8">
-                                    
-                                    <div class="relative pl-8 group">
-                                        <div class="timeline-dot bg-primary-600"></div>
-                                        <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                            <span class="text-xs font-bold font-mono text-primary-600 dark:text-primary-400 w-28 flex-shrink-0 uppercase tracking-wide">2025 - Pres</span>
-                                            <div>
-                                                <h4 class="text-gray-800 dark:text-white font-bold">Software Engineer @ Google</h4>
-                                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Working on large scale distributed systems and AI infrastructure.</p>
-                                            </div>
-                                        </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                
+                                <div class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:shadow-lg transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-primary-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400 mb-5 group-hover:scale-110 transition-transform">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                                     </div>
-
-                                    <div class="relative pl-8 group">
-                                        <div class="timeline-dot"></div>
-                                        <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                            <span class="text-xs font-bold font-mono text-gray-500 dark:text-gray-500 w-28 flex-shrink-0 uppercase tracking-wide">2023 - 2025</span>
-                                            <div>
-                                                <h4 class="text-gray-800 dark:text-white font-bold">MS at USC</h4>
-                                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Specialized in ML, Robotics, and Computer Vision.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="relative pl-8 group">
-                                        <div class="timeline-dot"></div>
-                                        <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                            <span class="text-xs font-bold font-mono text-gray-500 dark:text-gray-500 w-28 flex-shrink-0 uppercase tracking-wide">2021 - 2022</span>
-                                            <div>
-                                                <h4 class="text-gray-800 dark:text-white font-bold">First Industry Experience</h4>
-                                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Completed multiple internships in ML and robotics.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="relative pl-8 group">
-                                        <div class="timeline-dot"></div>
-                                        <div class="flex flex-col sm:flex-row sm:items-baseline">
-                                            <span class="text-xs font-bold font-mono text-gray-500 dark:text-gray-500 w-28 flex-shrink-0 uppercase tracking-wide">2019 - 2023</span>
-                                            <div>
-                                                <h4 class="text-gray-800 dark:text-white font-bold">Undergrad in Computer Engineering</h4>
-                                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Started my academic journey with a focus on hardware-software integration.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">The Builder</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                        I've always loved taking things apart and building them back better. From writing my first C program at age 9 to building a 2-axis gimbal from scratch, that tinkerer's mindset now drives how I architect large-scale, fault-tolerant distributed systems at Google.
+                                    </p>
                                 </div>
+
+                                <div class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:shadow-lg transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-primary-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400 mb-5 group-hover:scale-110 transition-transform">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">The AI Explorer</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                        Intrigued by how machines interpret the world. At USC, I specialized in Computer Vision and Deep Learning. My favorite moments include deploying live EfficientDet models on phones for college Robocon and optimizing multi-threaded AI pipelines for industry clients.
+                                    </p>
+                                </div>
+
+                                <div class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:shadow-lg transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-primary-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400 mb-5 group-hover:scale-110 transition-transform">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">The Researcher</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                        I love finding elegant optimization algorithms for complex multi-objective challenges. I've presented work on Cohort Intelligence for asset management and I'm a published author in the Springer LNEE book series covering deep learning reviews.
+                                    </p>
+                                </div>
+
+                                <div class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:shadow-lg transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-primary-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400 mb-5 group-hover:scale-110 transition-transform">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">The Mentor</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                        Community is everything. I co-founded and served as President of my college's engineering club (CODE), where I spent two years teaching Machine Learning to juniors. I'm also deeply passionate about mentoring high school students in FIRST Robotics.
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
 
                         <div>
-                            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Adventures & Life</h2>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">When I'm not coding, I'm exploring the world through my lens.</p>
+                            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">The Bucket List</h2>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-8">Places I've explored and adventures I'm chasing.</p>
                             
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <div class="img-zoom-container rounded-lg overflow-hidden h-40">
-                                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="img-zoom w-full h-full object-cover" alt="Travel">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                
+                                <!-- National Parks -->
+                                <div class="bg-gray-50 dark:bg-gray-700/30 p-5 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
+                                    <h3 class="font-bold text-gray-800 dark:text-white mb-4 flex items-center border-b border-gray-200 dark:border-gray-600 pb-2">
+                                        <span class="text-xl mr-2">🌲</span> National Parks
+                                    </h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                                            <svg class="w-5 h-5 text-primary-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            Yosemite NP
+                                        </li>
+                                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                                            <svg class="w-5 h-5 text-primary-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            Joshua Tree NP
+                                        </li>
+                                        <li class="flex items-center text-sm text-gray-400 dark:text-gray-500">
+                                            <svg class="w-5 h-5 text-gray-300 dark:text-gray-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"></circle></svg>
+                                            Zion NP
+                                        </li>
+                                        <li class="flex items-center text-sm text-gray-400 dark:text-gray-500">
+                                            <svg class="w-5 h-5 text-gray-300 dark:text-gray-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"></circle></svg>
+                                            Yellowstone NP
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="img-zoom-container rounded-lg overflow-hidden h-40">
-                                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="img-zoom w-full h-full object-cover" alt="Camping">
+
+                                <!-- Adventures -->
+                                <div class="bg-gray-50 dark:bg-gray-700/30 p-5 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
+                                    <h3 class="font-bold text-gray-800 dark:text-white mb-4 flex items-center border-b border-gray-200 dark:border-gray-600 pb-2">
+                                        <span class="text-xl mr-2">🚀</span> Adventures
+                                    </h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                                            <svg class="w-5 h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>Build a robot from scratch</span>
+                                        </li>
+                                        <li class="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                                            <svg class="w-5 h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>Publish a research paper</span>
+                                        </li>
+                                        <li class="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                                            <svg class="w-5 h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>Skydiving</span>
+                                        </li>
+                                        <li class="flex items-start text-sm text-gray-400 dark:text-gray-500">
+                                            <svg class="w-5 h-5 text-gray-300 dark:text-gray-600 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"></circle></svg>
+                                            <span>Scuba Diving</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="img-zoom-container rounded-lg overflow-hidden h-40">
-                                    <img src="https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="img-zoom w-full h-full object-cover" alt="Robotics">
-                                </div>
+
                             </div>
                         </div>
 

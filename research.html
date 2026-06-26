@@ -38,6 +38,15 @@
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFV90DHB74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DFV90DHB74');
+    </script>
 </head>
 <body class="bg-primary-50 font-sans dark:bg-gray-900 transition-colors duration-300">
     <nav class="bg-white shadow-sm sticky top-0 z-40 dark:bg-gray-800 transition-colors duration-300">
@@ -51,6 +60,7 @@
                     <a href="about.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
                     <a href="resume.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
                     <a href="research.html" class="text-primary-600 font-medium dark:text-primary-400">Research & Projects</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Blog</a>
                     <a href="contact.html" class="text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
                     
                     <button id="themeToggle" class="p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
@@ -77,6 +87,7 @@
                 <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
                 <a href="resume.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Resume</a>
                 <a href="research.html" class="block px-3 py-2 text-primary-600 font-medium dark:text-primary-400 bg-primary-50 dark:bg-gray-700">Research & Projects</a>
+                <a href="blog.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Blog</a>
                 <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
                 <button id="mobileThemeToggle" class="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300">
                     Toggle Dark Mode
@@ -96,8 +107,7 @@
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8 border-b border-primary-200 dark:border-gray-700 pb-2">Research</h2>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Robotic Connector Manipulation - IIWA 14 Robot with NIST Board</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Advisor: Dr. S K Gupta, RRoS Lab | Spring/2025</p>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Robotic Connector Manipulation - IIWA 14 Robot with NIST Board | RRoS Lab</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Built simulation environment in NVIDIA Isaac Sim 4.5 for IIWA 14 to perform plug/unplug operations. Developed RL-based control policies and integrated computer vision for connector detection and pose estimation.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">NVIDIA Isaac Sim 4.5</span>
@@ -105,6 +115,78 @@
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Computer Vision</span>
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">IIWA 14 Robot</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <div class="flex items-center justify-between mb-8 border-b border-primary-200 dark:border-gray-700 pb-2">
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Publications</h2>
+                    <a href="https://scholar.google.com/citations?user=oBGoT0QAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-500 dark:text-primary-400 font-medium text-sm flex items-center transition-colors">
+                        Google Scholar 
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group relative">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">
+                            <a href="https://link.springer.com/chapter/10.1007/978-981-99-1521-7_10" target="_blank" rel="noopener noreferrer" class="before:absolute before:inset-0">Solving Asset and Liability Management Using Cohort Intelligence and Goal Programming</a>
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2 relative z-10">IG Gala, A Nargundkar, <a href="http://scholar.google.com/citations?hl=en&amp;user=IAvtDokAAAAJ" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200 hover:underline">Dr. Anand J Kulkarni (Advisor)</a>, A Shastri</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2 relative z-10">Applied Cohort Intelligence and Goal Programming optimization techniques to address complex multi-objective asset and liability management challenges in financial systems.</p>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 relative z-10">
+                            <span class="font-medium italic mr-2">Optimization Methods for Product and System Design</span>
+                            <span>&bull; 2023</span>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group">
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-19-6581-4_40" target="_blank" rel="noopener noreferrer" class="block">
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">Freight Cost Prediction Using Machine Learning Algorithms</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-2">P Kulkarni, I Gala, A Nargundkar</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Proposed a robust machine learning framework to accurately forecast freight costs, analyzing various predictive models to optimize supply chain logistics and reduce operational overhead.</p>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-medium italic mr-2">Intelligent Systems and Applications: Select Proceedings of ICISA 2022</span>
+                                <span>&bull; 2023</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group">
+                        <a href="https://www.academia.edu/download/100246339/A_Comprehensive_Review_of_Advertisement_Platforms.pdf" target="_blank" rel="noopener noreferrer" class="block">
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">Digital Advertisement Platforms: A Comprehensive Survey</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-2">J Ambikar, A Paithane, I Gala, P Kulkarni, G Chiddarwar</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Surveyed contemporary digital advertisement platforms, evaluating their core algorithms, target audience reach, and overall effectiveness in optimizing targeted marketing campaigns.</p>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-medium italic mr-2">Int J Res Appl Sci Eng Technol 11</span>
+                                <span>&bull; 2023</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group">
+                        <a href="https://doi.org/10.1201/9781003107767-7" target="_blank" rel="noopener noreferrer" class="block">
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">Time Series Forecasting: From Classical to Deep Learning Models</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-2">IG Gala, P Kulkarni</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Analyzed the evolution of time series forecasting techniques, comparing traditional statistical approaches with state-of-the-art deep learning architectures for predictive accuracy.</p>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-medium italic mr-2">AI-Based Metaheuristics for Information Security and Digital Media</span>
+                                <span>&bull; 2023</span>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700 group">
+                        <a href="https://doi.org/10.1201/9781003107767-4" target="_blank" rel="noopener noreferrer" class="block">
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">Deep Learning for Toxicity Analysis: A Systematic Review</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-2">P Kulkarni, IG Gala</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">Examined recent advancements in utilizing deep neural networks and NLP algorithms for toxicity analysis, focusing on methodologies for identifying and filtering harmful online content.</p>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-medium italic mr-2">AI-Based Metaheuristics for Information Security and Digital Media</span>
+                                <span>&bull; 2023</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -176,9 +258,29 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300 lg:col-span-2 xl:col-span-3">
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Dexterous Manipulation - Throwing & Catching</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Developed an RL-based framework for dexterous manipulation tasks using MuJoCo environments with hand models.</p>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                            <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-gray-50 dark:bg-gray-900 flex flex-col transition-transform duration-300 hover:scale-[1.4] hover:z-20 hover:shadow-2xl cursor-pointer relative origin-center">
+                                <img src="assets/demo_gifs/throw_long.gif" alt="Throw Long" class="w-full h-auto object-cover border-b border-gray-200 dark:border-gray-700">
+                                <span class="text-xs text-center py-2 text-gray-500 font-medium">Throw Long</span>
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-gray-50 dark:bg-gray-900 flex flex-col transition-transform duration-300 hover:scale-[1.4] hover:z-20 hover:shadow-2xl cursor-pointer relative origin-center">
+                                <img src="assets/demo_gifs/throw short.gif" alt="Throw Short" class="w-full h-auto object-cover border-b border-gray-200 dark:border-gray-700">
+                                <span class="text-xs text-center py-2 text-gray-500 font-medium">Throw Short</span>
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-gray-50 dark:bg-gray-900 flex flex-col transition-transform duration-300 hover:scale-[1.4] hover:z-20 hover:shadow-2xl cursor-pointer relative origin-center">
+                                <img src="assets/demo_gifs/catch_allegro.gif" alt="Catch Allegro" class="w-full h-auto object-cover border-b border-gray-200 dark:border-gray-700">
+                                <span class="text-xs text-center py-2 text-gray-500 font-medium">Catch Allegro</span>
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-gray-50 dark:bg-gray-900 flex flex-col transition-transform duration-300 hover:scale-[1.4] hover:z-20 hover:shadow-2xl cursor-pointer relative origin-center">
+                                <img src="assets/demo_gifs/catch leap.gif" alt="Catch Leap" class="w-full h-auto object-cover border-b border-gray-200 dark:border-gray-700">
+                                <span class="text-xs text-center py-2 text-gray-500 font-medium">Catch Leap</span>
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Reinforcement Learning</span>
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">MuJoCo</span>
@@ -215,20 +317,20 @@
                     </div>
                     
                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors duration-300">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Vision-Based Tool Wear Detection System</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Developed computer vision system for real-time tool wear detection in manufacturing environment.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Vision-Based Preventive Tool Wear Detection & Data Collection</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Developed a computer vision system for continuous data collection and preventive monitoring of tool wear and tear in a manufacturing environment.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Computer Vision</span>
                             <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">OpenCV</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Manufacturing</span>
-                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Quality Control</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Preventive Maintenance</span>
+                            <span class="px-3 py-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-sm rounded-full">Data Collection</span>
                         </div>
                         <div class="text-sm text-gray-600 dark:text-gray-300">
                             <p class="font-medium text-gray-800 dark:text-white">Features:</p>
                             <ul class="list-disc pl-5 mt-1 space-y-1">
-                                <li>Real-time processing on production line</li>
-                                <li>Integrated with OPC UA framework</li>
-                                <li>Reduced tool replacement downtime</li>
+                                <li>Automated data collection for tool wear and tear</li>
+                                <li>Preventive maintenance to reduce unplanned downtime</li>
+                                <li>Integrated with OPC UA framework for continuous monitoring</li>
                             </ul>
                         </div>
                     </div>

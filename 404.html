@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | System Error</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9f7',
+                            100: '#e1f3ef',
+                            200: '#c3e7df',
+                            300: '#a5dbcf',
+                            400: '#68c4af',
+                            500: '#2aae96',
+                            600: '#269d87',
+                            700: '#208370',
+                            800: '#19695a',
+                            900: '#14564a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFV90DHB74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DFV90DHB74');
+    </script>
+    
+    <style>
+        .glitch {
+            position: relative;
+            color: #269d87;
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111827;
+        }
+        .glitch::before {
+            left: 2px;
+            text-shadow: -1px 0 red;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+        .glitch::after {
+            left: -2px;
+            text-shadow: -1px 0 blue;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(42px, 9999px, 44px, 0); }
+            20% { clip: rect(12px, 9999px, 59px, 0); }
+            40% { clip: rect(22px, 9999px, 49px, 0); }
+            60% { clip: rect(81px, 9999px, 10px, 0); }
+            80% { clip: rect(98px, 9999px, 53px, 0); }
+            100% { clip: rect(11px, 9999px, 76px, 0); }
+        }
+        .terminal {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 1px solid #374151;
+        }
+        .terminal-header {
+            background: #1f2937;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .red { background: #ef4444; }
+        .yellow { background: #f59e0b; }
+        .green { background: #10b981; }
+        .blinking-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background-color: #10b981;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-gray-900 font-mono text-gray-300 h-screen flex flex-col justify-center items-center overflow-hidden">
+    
+    <div class="max-w-2xl w-full px-4">
+        <h1 class="text-7xl font-bold mb-8 text-center glitch" data-text="404">404</h1>
+        
+        <div class="terminal bg-gray-900 w-full mb-8">
+            <div class="terminal-header">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+                <span class="ml-4 text-xs text-gray-500 font-sans">bash — root@ishangala:~</span>
+            </div>
+            <div class="p-6 text-sm md:text-base leading-relaxed">
+                <p class="text-green-400 mb-2">$ ./locate_page.sh --target URL</p>
+                <p class="text-gray-400 mb-2">> Searching latent space...</p>
+                <p class="text-gray-400 mb-2">> Querying vector database...</p>
+                <p class="text-red-400 mb-4">[ERROR] Vector distance threshold exceeded. Page not found in current dimension.</p>
+                
+                <p class="text-green-400 mb-2">$ analyze_failure_reason</p>
+                <p class="text-gray-400 mb-4">> Model hallucination detected. The agent got lost while optimizing the objective function and dropped the URL tensor.</p>
+                
+                <p class="text-green-400">$ prompt_user_action<span class="blinking-cursor"></span></p>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="index.html" class="group relative px-6 py-3 font-bold text-white rounded-lg bg-primary-600 hover:bg-primary-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(38,157,135,0.5)] flex items-center font-sans">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Abort & Return to Base
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Force dark mode for this specific page
+        document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>
